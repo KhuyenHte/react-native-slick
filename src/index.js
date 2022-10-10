@@ -408,8 +408,7 @@ export default class extends Component {
    * @param  {object} e native event
    */
   onScrollEnd = e => {
-    // update scroll state
-    this.internals.isScrolling = false
+    
 
     // making our events coming from android compatible to updateIndex logic
     if (!e.nativeEvent.contentOffset) {
@@ -428,6 +427,10 @@ export default class extends Component {
       this.autoplay()
       this.loopJump()
     })
+    
+    // update scroll state
+    this.internals.isScrolling = false
+    
     // if `onMomentumScrollEnd` registered will be called here
     this.props.onMomentumScrollEnd &&
       this.props.onMomentumScrollEnd(e, this.fullState(), this)
