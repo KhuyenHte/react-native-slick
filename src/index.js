@@ -3,18 +3,18 @@
  * @author leecade<leecade@163.com>
  * @author @ahmed3mar<ahmed3mar@outlook.com>
  */
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+
+import PropTypes from 'prop-types';
 import {
-  Text,
-  View,
-  ViewPropTypes,
-  ScrollView,
-  Dimensions,
-  TouchableOpacity,
-  Platform,
-  ActivityIndicator
-} from 'react-native'
+	ActivityIndicator,
+	Dimensions,
+	Platform,
+	ScrollView,
+	Text,
+	TouchableOpacity,
+	View,
+} from 'react-native';
 
 /**
  * Default styles
@@ -323,7 +323,7 @@ export default class extends Component {
     // contentOffset is not working in react 0.48.x so we need to use scrollTo
     // to emulate offset.
     if (this.initialRender && this.state.total > 1) {
-      this.scrollView.scrollTo({ ...offset, animated: false })
+    //   this.scrollView.scrollTo({ ...offset, animated: false })
       this.initialRender = false
     }
 
