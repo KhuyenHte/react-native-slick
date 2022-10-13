@@ -561,7 +561,7 @@ export default class extends Component {
    * @param  {bool} animated
    */
 
-  scrollTo = (index, animated = true) => {
+  scrollTo = (index, animated = false) => {
     if (
       this.internals.isScrolling ||
       this.state.total < 2 ||
