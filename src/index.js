@@ -15,6 +15,8 @@ import {
 	View,
 } from 'react-native';
 
+import ViewPager from '@react-native-community/viewpager';
+
 /**
   * Default styles
   * @type {StyleSheetPropType}
@@ -635,14 +637,14 @@ import {
 		)
 	 }
 	 return (
-	   <ViewPagerAndroid ref={this.refScrollView}
+	   <ViewPager ref={this.refScrollView}
 		 {...this.props}
 		 initialPage={this.props.loop ? this.state.index + 1 : this.state.index}
 		 onPageSelected={this.onScrollEnd}
 		 key={pages.length}
 		 style={[styles.wrapperAndroid, this.props.style]}>
 		 {pages}
-	   </ViewPagerAndroid>
+	   </ViewPager>
 	 )
    }
  
